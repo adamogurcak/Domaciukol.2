@@ -1,9 +1,16 @@
 
+import jdk.vm.ci.meta.Local;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Guest {
 
+
+    public class Booking {
+        private Room room;
+        private Guest guest;
+        private List<Guest> otherGuests;
 
 
 
@@ -11,6 +18,13 @@ public class Guest {
     private LocalDate birthdate;
     private BigDecimal withBalconyAndSeaView;
 
+    public Guest(String nameAndSurname, LocalDate birthdate) {
+
+        this(nameAndSurname, birthdate, BigDecimal.ZERO, 1);
+
+
+
+    }
 
     private int roomNo;
 
@@ -62,4 +76,17 @@ public class Guest {
         this.withBalconyAndSeaView = withBalconyAndSeaView;
         this.roomNo = roomNo;
     }
-}
+
+        @Override
+        public String toString() {
+            return "Booking{" +
+                    "room=" + room +
+                    ", guest=" + guest +
+                    ", otherGuests=" + otherGuests +
+                    ", nameAndSurname='" + nameAndSurname + '\'' +
+                    ", birthdate=" + birthdate +
+                    ", withBalconyAndSeaView=" + withBalconyAndSeaView +
+                    ", roomNo=" + roomNo +
+                    '}';
+        }
+    }

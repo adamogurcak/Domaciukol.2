@@ -34,6 +34,10 @@ public class Main {
         System.out.println("Jméno prvního hosta" +guestList.get(1).getNameAndSurname());
         System.out.println("Jméno druhého hosta" +guestList.get(2).getNameAndSurname());
 
+        for (Guest guest : guestList){
+            System.out.println(guest.getName() + "");
+        }
+
 
 
 
